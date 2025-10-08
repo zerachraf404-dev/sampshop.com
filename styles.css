@@ -65,3 +65,10 @@ footer {
   width: 100%;
   bottom: 0;
 }
+.site-name h1 {
+  font-family: 'Lobster', cursive; /* nouvelle police */
+  color: white;
+  font-size: 28px; /* taille du texte */
+  margin: 0;
+}
+
