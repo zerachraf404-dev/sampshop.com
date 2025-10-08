@@ -4,38 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samp Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff7b00;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #fff7f0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .product h3 {
+      color: #333;
+      margin: 10px 0 5px;
+    }
+
+    .price {
+      color: #ff7b00;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #ff7b00;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="Logo Samp Shop">
     <h1>Samp Shop</h1>
-    <nav>
-      <ul>
-        <li><a href="#produits">Produits</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <p>🛒 Vos produits préférés, au meilleur prix</p>
   </header>
 
-  <section id="produits">
-    <h2>Nos Produits</h2>
-    <div class="produit">
-      <img src="images/produit1.jpg" alt="Produit 1">
-      <h3>Produit 1</h3>
-      <p>Prix : 1000 DH</p>
-      <a href="https://wa.me/221709306218?text=Je%20veux%20commander%20le%20Produit%201" target="_blank">Commander</a>
+  <section class="products">
+    <div class="product">
+      <img src="produit1.jpg" alt="Produit 1">
+      <h3>Montre connectée</h3>
+      <p class="price">10 000 FCFA</p>
+      <a href="https://wa.me/221709306218?text=Je veux acheter la montre connectée" class="whatsapp-btn">Acheter sur WhatsApp</a>
     </div>
-    <!-- Répéter pour les autres produits -->
-  </section>
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <p>Email : info@sampshop.com</p>
-    <p>Téléphone : +221 70 930 6218</p>
+    <div class="product">
+      <img src="produit2.jpg" alt="Produit 2">
+      <h3>Écouteurs Bluetooth</h3>
+      <p class="price">8 000 FCFA</p>
+      <a href="https://wa.me/221709306218?text=Je veux acheter les écouteurs Bluetooth" class="whatsapp-btn">Acheter sur WhatsApp</a>
+    </div>
+
+    <div class="product">
+      <img src="produit3.jpg" alt="Produit 3">
+      <h3>Chaussures de sport</h3>
+      <p class="price">12 000 FCFA</p>
+      <a href="https://wa.me/221709306218?text=Je veux acheter les chaussures de sport" class="whatsapp-btn">Acheter sur WhatsApp</a>
+    </div>
+
+    <div class="product">
+      <img src="produit4.jpg" alt="Produit 4">
+      <h3>T-shirt homme</h3>
+      <p class="price">6 000 FCFA</p>
+      <a href="https://wa.me/221709306218?text=Je veux acheter le T-shirt homme" class="whatsapp-btn">Acheter sur WhatsApp</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Samp Shop</p>
+    📞 Contact WhatsApp : +221 70 930 6218
   </footer>
 </body>
 </html>
