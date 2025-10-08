@@ -66,26 +66,16 @@
       border-radius: 10px 10px 0 0;
     }
 
-    .product h3 {
-      color: #333;
-      margin: 10px 0 5px;
-    }
-
     .price {
       color: #ff7b00;
       font-weight: bold;
       font-size: 18px;
+      margin: 10px 0;
     }
 
-    .whatsapp-btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+    .product a {
+      text-decoration: none; /* enlève le soulignement sur le lien */
+      color: inherit; /* conserve la couleur du texte */
     }
 
     footer {
@@ -107,34 +97,34 @@
     </div>
   </header>
 
-  <!-- Section produits -->
+  <!-- Section produits (accueil : juste image + prix + lien vers page produit) -->
   <section class="products">
     <div class="product">
-      <img src="produit1.jpg" alt="Produit 1">
-      <h3>Montre connectée</h3>
-      <p class="price">10 000 FCFA</p>
-      <a href="https://wa.me/221709306218?text=Je veux acheter la montre connectée" class="whatsapp-btn">Acheter sur WhatsApp</a>
+      <a href="produit1.html">
+        <img src="produit1.jpg" alt="Montre connectée">
+        <p class="price">10 000 FCFA</p>
+      </a>
     </div>
 
     <div class="product">
-      <img src="produit2.jpg" alt="Produit 2">
-      <h3>Écouteurs Bluetooth</h3>
-      <p class="price">8 000 FCFA</p>
-      <a href="https://wa.me/221709306218?text=Je veux acheter les écouteurs Bluetooth" class="whatsapp-btn">Acheter sur WhatsApp</a>
+      <a href="produit2.html">
+        <img src="produit2.jpg" alt="Écouteurs Bluetooth">
+        <p class="price">8 000 FCFA</p>
+      </a>
     </div>
 
     <div class="product">
-      <img src="produit3.jpg" alt="Produit 3">
-      <h3>Chaussures de sport</h3>
-      <p class="price">12 000 FCFA</p>
-      <a href="https://wa.me/221709306218?text=Je veux acheter les chaussures de sport" class="whatsapp-btn">Acheter sur WhatsApp</a>
+      <a href="produit3.html">
+        <img src="produit3.jpg" alt="Chaussures de sport">
+        <p class="price">12 000 FCFA</p>
+      </a>
     </div>
 
     <div class="product">
-      <img src="produit4.jpg" alt="Produit 4">
-      <h3>T-shirt homme</h3>
-      <p class="price">6 000 FCFA</p>
-      <a href="https://wa.me/221709306218?text=Je veux acheter le T-shirt homme" class="whatsapp-btn">Acheter sur WhatsApp</a>
+      <a href="produit4.html">
+        <img src="produit4.jpg" alt="T-shirt homme">
+        <p class="price">6 000 FCFA</p>
+      </a>
     </div>
   </section>
 
