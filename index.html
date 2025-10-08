@@ -13,20 +13,28 @@
       padding: 0;
     }
 
+    /* Header avec logo et nom du site */
     header {
       background-color: #ff7b00;
       padding: 15px 30px;
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* logo à gauche */
+      gap: 15px; /* espace entre logo et nom */
     }
 
     .logo-left img {
       width: 80px; /* ajustable */
       height: 80px;
-      border-radius: 50%;
+      border-radius: 50%; /* rend le logo rond */
     }
 
+    .site-name h1 {
+      color: white;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    /* Section produits */
     .products {
       display: flex;
       flex-wrap: wrap;
@@ -85,12 +93,17 @@
   </style>
 </head>
 <body>
+  <!-- Header avec logo et nom -->
   <header>
     <div class="logo-left">
-      <img src="logo.png" alt="Logo Samp Shop">
+      <img src="monlogo.jpg" alt="Logo Samp Shop">
+    </div>
+    <div class="site-name">
+      <h1>Samp Shop</h1>
     </div>
   </header>
 
+  <!-- Section produits -->
   <section class="products">
     <div class="product">
       <img src="produit1.jpg" alt="Produit 1">
@@ -121,6 +134,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     📞 Contact WhatsApp : +221 70 930 6218
   </footer>
