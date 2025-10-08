@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samp Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -15,19 +16,43 @@
     header {
       background-color: #ff7b00;
       color: white;
-      text-align: center;
       padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    header img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+    .logo-container {
+      width: 100%;
+      text-align: center;
       margin-bottom: 10px;
     }
 
-    h1 {
+    .logo-container img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding-left: 20px;
+    }
+
+    .title-container h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;
       margin: 0;
+    }
+
+    .title-container p {
+      margin: 0;
+      font-size: 14px;
+      color: #fff7e6;
     }
 
     .products {
@@ -89,9 +114,12 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Samp Shop">
-    <h1>Samp Shop</h1>
-    <p>🛒 Vos produits préférés, au meilleur prix</p>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Samp Shop">
+    </div>
+    <div class="title-container">
+      <h1>Samp Shop</h1>
+    </div>
   </header>
 
   <section class="products">
