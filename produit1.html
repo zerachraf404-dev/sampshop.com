@@ -3,33 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Montre connectée - Samp Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Produits - Samp Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Poppins', sans-serif; background-color: #fff; margin: 0; padding: 0; }
-    header { background-color: #ff7b00; padding: 15px 30px; display: flex; align-items: center; gap: 15px; }
-    .logo-left img { width: 80px; height: 80px; border-radius: 50%; }
-    .site-name h1 { font-family: 'Pacifico', cursive; color: white; font-size: 28px; margin: 0; }
-    .product-page { text-align: center; padding: 30px; }
-    .price { color: #ff7b00; font-weight: bold; font-size: 24px; margin: 10px 0; }
-    .description { margin: 15px 0; }
-    .whatsapp-btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #25D366; color: white; border-radius: 5px; text-decoration: none; font-weight: bold; }
-    footer { text-align: center; padding: 15px; background-color: #ff7b00; color: white; margin-top: 30px; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fffdf9;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff7b00;
+      padding: 15px 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    .product-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      gap: 30px;
+      border-bottom: 2px solid #ffe0b3;
+    }
+
+    .product-section img {
+      width: 350px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-info {
+      max-width: 400px;
+    }
+
+    .product-info h2 {
+      color: #ff7b00;
+      font-size: 24px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #ff7b00;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebd5d;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ff7b00;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    @media(max-width: 768px) {
+      .product-section {
+        flex-direction: column;
+      }
+      .reverse {
+        flex-direction: column;
+      }
+      .product-section img {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-left"><img src="monlogo.jpg" alt="Logo Samp Shop"></div>
-    <div class="site-name"><h1>Samp Shop</h1></div>
-  </header>
 
-  <div class="product-page">
-    <h2>Montre connectée</h2>
-    <p class="price">10 000 FCFA</p>
-    <p class="description">Montre connectée avec suivi de la fréquence cardiaque, notifications et étanche jusqu’à 50m.</p>
-    <a href="https://wa.me/221709306218?text=Je veux acheter la montre connectée" class="whatsapp-btn">Commander sur WhatsApp</a>
-  </div>
+  <header>Nos Produits</header>
+
+  <!-- Premier produit : grande photo à droite -->
+  <section class="product-section">
+    <div class="product-info">
+      <h2>Montre Connectée</h2>
+      <p>
+        Élégante, moderne et résistante à l’eau 💧<br>
+        Affiche la fréquence cardiaque, les pas, les calories et les notifications directement depuis ton poignet.
+      </p>
+      <p class="price">10 000 FCFA</p>
+      <a href="https://wa.me/221709306218?text=Je%20veux%20acheter%20la%20montre%20connectée" class="btn-whatsapp">Commander sur WhatsApp</a>
+    </div>
+    <img src="produit1.jpg" alt="Montre connectée">
+  </section>
+
+  <!-- Deuxième section du même produit : photo + description en dessous -->
+  <section class="product-section reverse">
+    <div class="product-info">
+      <h2>Vue rapprochée & Détails</h2>
+      <p>
+        Écran tactile couleur, autonomie de 5 jours, bracelet en silicone souple et confortable.<br>
+        Compatible Android et iPhone 📱.
+      </p>
+    </div>
+    <img src="produit1-detail1.jpg" alt="Montre connectée détail">
+  </section>
+
+  <!-- Deuxième produit -->
+  <section class="product-section">
+    <div class="product-info">
+      <h2>Écouteurs Bluetooth</h2>
+      <p>
+        Son clair et puissant 🎶<br>
+        Boîtier de charge magnétique, réduction de bruit et connexion stable avec tous les téléphones.
+      </p>
+      <p class="price">8 000 FCFA</p>
+      <a href="https://wa.me/221709306218?text=Je%20veux%20acheter%20les%20écouteurs%20Bluetooth" class="btn-whatsapp">Commander sur WhatsApp</a>
+    </div>
+    <img src="produit2.jpg" alt="Écouteurs Bluetooth">
+  </section>
 
   <footer>📞 Contact WhatsApp : +221 70 930 6218</footer>
+
 </body>
 </html>
