@@ -3,180 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Montre Connectée - Samp Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Détails du produit - Samp Shop</title>
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #fffdf9;
+      padding: 0;
+      background-color: #fff;
       color: #333;
-      scroll-behavior: smooth;
     }
 
     header {
       background-color: #ff7b00;
-      padding: 15px 30px;
       color: white;
-      font-weight: bold;
       text-align: center;
-      font-size: 22px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    .product-section {
+    .section {
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 40px 20px;
       flex-wrap: wrap;
-      padding: 60px 20px;
       gap: 30px;
-      border-bottom: 2px solid #ffe0b3;
-      background-color: #fff;
     }
 
-    /* Taille des images normales */
-    .product-section img {
-      width: 360px;
-      height: auto;
-      border-radius: 12px;
+    .section img {
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
-    .product-section img:hover {
+    .section img:hover {
       transform: scale(1.03);
     }
 
-    /* Taille plus petite pour les deux dernières images */
-    .small-img img {
-      width: 250px;
+    .text {
+      max-width: 400px;
     }
 
-    .product-info {
-      max-width: 420px;
-    }
-
-    .product-info h2 {
+    .text h2 {
       color: #ff7b00;
-      font-size: 26px;
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
-    .price {
-      font-size: 22px;
-      color: #ff7b00;
-      font-weight: bold;
-      margin-top: 10px;
+    .text p {
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: #25d366;
+    /* Image grande à droite */
+    .right img {
+      width: 400px;
+    }
+
+    /* Image grande à gauche */
+    .left img {
+      width: 400px;
+    }
+
+    /* Petites images */
+    .small img {
+      width: 250px;
+    }
+
+    /* Bouton WhatsApp */
+    .whatsapp {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .whatsapp a {
+      background-color: #25D366;
       color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
       text-decoration: none;
+      padding: 20px 40px;
+      border-radius: 50px;
+      font-size: 22px;
       font-weight: bold;
-      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
     }
 
-    .btn-whatsapp:hover {
-      background-color: #1ebd5d;
+    .whatsapp a:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.05);
     }
 
     footer {
-      text-align: center;
       background-color: #ff7b00;
       color: white;
+      text-align: center;
       padding: 15px;
       margin-top: 30px;
-    }
-
-    @media(max-width: 768px) {
-      .product-section {
-        flex-direction: column;
-      }
-      .product-section img {
-        width: 100%;
-        max-width: 350px;
-      }
-      .small-img img {
-        width: 70%;
-      }
     }
   </style>
 </head>
 <body>
 
-  <header>Montre Connectée</header>
+  <header>Tapis De Prière Orthopédique  - Détails du produit</header>
 
-  <!-- 🟠 Image principale du produit -->
-  <section class="product-section">
-    <div class="product-info">
-      <h2>Montre Connectée Intelligente</h2>
-      <p>
-        Élégante, moderne et résistante à l’eau 💧.<br>
-        Suivez votre santé, vos pas, votre sommeil et vos notifications directement depuis votre poignet.
-      </p>
-      <p class="price">10 000 FCFA</p>
-      <a href="https://wa.me/221709306218?text=Je%20veux%20acheter%20la%20montre%20connectée" class="btn-whatsapp">Commander sur WhatsApp</a>
+  <!-- Première section : image grande à droite -->
+  <div class="section right">
+    <div class="text">
+      <h2>Tapis de prière confortable avec un soutien complet pour les genoux.</h2>
+      <p>Profite d’un confort optimal pendant la prière grâce à ce tapis spécialement conçu pour soulager la pression sur les genoux</p>
     </div>
-    <img src="produit1.jpg" alt="Montre connectée">
-  </section>
+    <img src="produit1-detail1.jpg" alt="Tapis De Prière Orthopédique">
+  </div>
 
-  <!-- 🔹 1ère photo détail -->
-  <section class="product-section">
-    <div class="product-info">
-      <h2>Détails du design</h2>
-      <p>
-        Boîtier en aluminium léger, bracelet en silicone souple et ajustable.<br>
-        Disponible en plusieurs coloris 🎨.
-      </p>
-    </div>
-    <img src="produit1-detail1.jpg" alt="Montre détail design">
-  </section>
-
-  <!-- 🔹 2e photo détail -->
-  <section class="product-section">
-    <div class="product-info">
+  <!-- Deuxième section : image grande à gauche -->
+  <div class="section left">
+    <img src="produit1-detail2.jpg" alt="Tapis De Prière Orthopédique">
+    <div class="text">
       <h2>Fonctionnalités avancées</h2>
-      <p>
-        Capteur de fréquence cardiaque ❤️, podomètre, calories brûlées, notifications d’appel et messages.<br>
-        Compatible Android et iOS 📱.
-      </p>
-    </div>
-    <img src="produit1-detail2.jpg" alt="Montre fonctionnalités">
-  </section>
+      <p>🌙 Prie sans douleur et retrouve ton khouchou‘ avec le tapis de prière Al-Moufid de luxe ! 🕌
 
-  <!-- 🔹 3e photo (petite image) -->
-  <section class="product-section small-img">
-    <div class="product-info">
-      <h2>Autonomie et recharge</h2>
-      <p>
-        Batterie longue durée (jusqu’à 5 jours) 🔋<br>
-        Recharge magnétique rapide avec câble inclus.
-      </p>
-    </div>
-    <img src="produit1-detail3.jpg" alt="Montre charge">
-  </section>
+Tu ressens des douleurs aux genoux pendant la prière ? 
+Ton confort te manque et ton recueillement en souffre ?
 
-  <!-- 🔹 4e photo (petite image) -->
-  <section class="product-section small-img">
-    <div class="product-info">
-      <h2>Confort au quotidien</h2>
-      <p>
-        Ultra légère et confortable à porter, même pendant le sport ou le sommeil 💤.<br>
-        Parfaite pour un usage quotidien.
-      </p>
-    </div>
-    <img src="produit1-detail4.jpg" alt="Montre confort">
-  </section>
+✨ Pour la première fois au Sénégal, découvre le tapis de prière Al-Moufid, au design exclusif et à la technologie innovante, disponible uniquement chez nous ! 
 
-  <footer>📞 Contact WhatsApp : +221 70 930 6218</footer>
+Grâce à son rembourrage ultra-confortable et sa texture premium, il t’offre une expérience de prière douce, paisible et sans douleur.
+
+🧡 Plus de confort.
+🕋 Plus de sérénité.
+🙏 Plus de spiritualité.
+
+👉 Fais de chaque prière un moment de paix avec Al-Moufid.</p>
+    </div>
+  </div>
+
+  <!-- Troisième section : petites images -->
+  <div class="section small">
+    <div class="text">
+      <h2>✨ Les caractéristiques du tapis de prière Al-Mihrab </h2>
+      <p>
+🔹 Design multicouche innovant :
+Le tapis est composé de quatre couches de haute qualité pour un confort et un maintien incomparables :
+
+1️⃣ Couche supérieure en velours doux, offrant une sensation luxueuse et agréable au toucher.
+2️⃣ Mousse à mémoire de forme de 8 cm d’épaisseur, pour un soutien exceptionnel et un confort absolu.
+3️⃣ Couche en mousse haute densité (1,5 cm), assurant la durabilité et la stabilité du tapis.
+4️⃣ Base antidérapante, garantissant une adhérence parfaite sur tous types de sols.</p>
+    </div>
+    <img src="produit1-detail3.jpg" alt="Batterie montre connectée">
+  </div>
+
+  <div class="section small">
+    <img src="produit1-detail4.jpg" alt=" Coussin de soutien intégré pour les genoux">
+    <div class="text">
+      <h2>Confort et légèreté</h2>
+      <p>Le tapis est équipé d’un coussin épais et flexible intégré, de 8 cm d’épaisseur, fabriqué en mousse à mémoire de forme de haute qualité (Memory Foam).
+Il est spécialement conçu pour offrir un soutien optimal aux genoux et réduire la pression sur les articulations, rendant chaque prosternation plus confortable et plus facile.</p>
+    </div>
+  </div>
+
+  <!-- Bouton WhatsApp -->
+  <div class="whatsapp">
+    <a href="https://wa.me/221709306218?text=Bonjour%2C%20je%20souhaite%20commander%20la%20montre%20connect%C3%A9e%20Samp%20Shop.">📦 Commander ici</a>
+  </div>
+
+  <footer>© 2025 Samp Shop - Tous droits réservés</footer>
 
 </body>
 </html>
