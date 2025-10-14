@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tapis prière orthopedique - Samp Shop</title>
+  <title>Montre Connectée - Samp Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -12,7 +12,7 @@
       margin: 0;
       background-color: #fffdf9;
       color: #333;
-      scroll-behavior: smooth; /* défilement fluide */
+      scroll-behavior: smooth;
     }
 
     header {
@@ -38,11 +38,22 @@
       background-color: #fff;
     }
 
+    /* Taille des images normales */
     .product-section img {
       width: 360px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-section img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Taille plus petite pour les deux dernières images */
+    .small-img img {
+      width: 250px;
     }
 
     .product-info {
@@ -85,81 +96,51 @@
       margin-top: 30px;
     }
 
-    .reverse {
-      flex-direction: row-reverse;
-      background-color: #fff8f0;
-    }
-
     @media(max-width: 768px) {
       .product-section {
-        flex-direction: column;
-      }
-      .reverse {
         flex-direction: column;
       }
       .product-section img {
         width: 100%;
         max-width: 350px;
       }
+      .small-img img {
+        width: 70%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>Tapis prière orthopedique</header>
+  <header>Montre Connectée</header>
 
-  <!-- 1️⃣ Première section -->
+  <!-- 🟠 Image principale du produit -->
   <section class="product-section">
     <div class="product-info">
       <h2>Montre Connectée Intelligente</h2>
       <p>
-        Élégante et moderne 💎<br>
+        Élégante, moderne et résistante à l’eau 💧.<br>
         Suivez votre santé, vos pas, votre sommeil et vos notifications directement depuis votre poignet.
       </p>
-      <p class="price">12 000 FCFA</p>
+      <p class="price">10 000 FCFA</p>
       <a href="https://wa.me/221709306218?text=Je%20veux%20acheter%20la%20montre%20connectée" class="btn-whatsapp">Commander sur WhatsApp</a>
     </div>
-    <img src="produit1.jpg" alt="Tapis prière orthopedique">
+    <img src="produit1.jpg" alt="Montre connectée">
   </section>
 
-  <!-- 2️⃣ Deuxième section -->
-  <section class="product-section reverse">
+  <!-- 🔹 1ère photo détail -->
+  <section class="product-section">
     <div class="product-info">
       <h2>Détails du design</h2>
       <p>
-        Boîtier en aluminium léger, bracelet silicone souple et ajustable.<br>
+        Boîtier en aluminium léger, bracelet en silicone souple et ajustable.<br>
         Disponible en plusieurs coloris 🎨.
       </p>
     </div>
     <img src="produit1-detail1.jpg" alt="Montre détail design">
   </section>
 
-  <!-- 3️⃣ Troisième section -->
+  <!-- 🔹 2e photo détail -->
   <section class="product-section">
     <div class="product-info">
-      <h2>Fonctionnalités avancées</h2>
-      <p>
-        Capteur de fréquence cardiaque ❤️, podomètre, calories brûlées, notifications d’appel et message.<br>
-        Compatible Android et iOS 📱.
-      </p>
-    </div>
-    <img src="produit1-detail2.jpg" alt="Montre fonctionnalités">
-  </section>
-
-  <!-- 4️⃣ Quatrième section -->
-  <section class="product-section reverse">
-    <div class="product-info">
-      <h2>Autonomie et recharge</h2>
-      <p>
-        Batterie longue durée (jusqu’à 5 jours) 🔋<br>
-        Recharge magnétique rapide avec câble inclus.
-      </p>
-    </div>
-    <img src="produit1-detail3.jpg" alt="Montre charge">
-  </section>
-
-  <footer>📞 Contact WhatsApp : +221 70 930 6218</footer>
-
-</body>
-</html>
-
+      <h2>Fonctionnalités
