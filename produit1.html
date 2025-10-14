@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produits - Samp Shop</title>
+  <title>Montre Connectée - Samp Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -12,6 +12,7 @@
       margin: 0;
       background-color: #fffdf9;
       color: #333;
+      scroll-behavior: smooth; /* défilement fluide */
     }
 
     header {
@@ -21,6 +22,9 @@
       font-weight: bold;
       text-align: center;
       font-size: 22px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .product-section {
@@ -28,29 +32,31 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 40px 20px;
+      padding: 60px 20px;
       gap: 30px;
       border-bottom: 2px solid #ffe0b3;
+      background-color: #fff;
     }
 
     .product-section img {
-      width: 350px;
+      width: 360px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .product-info {
-      max-width: 400px;
+      max-width: 420px;
     }
 
     .product-info h2 {
       color: #ff7b00;
-      font-size: 24px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     .price {
-      font-size: 20px;
+      font-size: 22px;
       color: #ff7b00;
       font-weight: bold;
       margin-top: 10px;
@@ -81,6 +87,7 @@
 
     .reverse {
       flex-direction: row-reverse;
+      background-color: #fff8f0;
     }
 
     @media(max-width: 768px) {
@@ -99,15 +106,15 @@
 </head>
 <body>
 
-  <header>Nos Produits</header>
+  <header>Montre Connectée</header>
 
-  <!-- Premier produit : grande photo à droite -->
+  <!-- 1️⃣ Première section -->
   <section class="product-section">
     <div class="product-info">
-      <h2>Montre Connectée</h2>
+      <h2>Montre Connectée Intelligente</h2>
       <p>
-        Élégante, moderne et résistante à l’eau 💧<br>
-        Affiche la fréquence cardiaque, les pas, les calories et les notifications directement depuis ton poignet.
+        Élégante et moderne 💎<br>
+        Suivez votre santé, vos pas, votre sommeil et vos notifications directement depuis votre poignet.
       </p>
       <p class="price">10 000 FCFA</p>
       <a href="https://wa.me/221709306218?text=Je%20veux%20acheter%20la%20montre%20connectée" class="btn-whatsapp">Commander sur WhatsApp</a>
@@ -115,30 +122,40 @@
     <img src="produit1.jpg" alt="Montre connectée">
   </section>
 
-  <!-- Deuxième section du même produit : photo + description en dessous -->
+  <!-- 2️⃣ Deuxième section -->
   <section class="product-section reverse">
     <div class="product-info">
-      <h2>Vue rapprochée & Détails</h2>
+      <h2>Détails du design</h2>
       <p>
-        Écran tactile couleur, autonomie de 5 jours, bracelet en silicone souple et confortable.<br>
-        Compatible Android et iPhone 📱.
+        Boîtier en aluminium léger, bracelet silicone souple et ajustable.<br>
+        Disponible en plusieurs coloris 🎨.
       </p>
     </div>
-    <img src="produit1-detail1.jpg" alt="Montre connectée détail">
+    <img src="produit1-detail1.jpg" alt="Montre détail design">
   </section>
 
-  <!-- Deuxième produit -->
+  <!-- 3️⃣ Troisième section -->
   <section class="product-section">
     <div class="product-info">
-      <h2>Écouteurs Bluetooth</h2>
+      <h2>Fonctionnalités avancées</h2>
       <p>
-        Son clair et puissant 🎶<br>
-        Boîtier de charge magnétique, réduction de bruit et connexion stable avec tous les téléphones.
+        Capteur de fréquence cardiaque ❤️, podomètre, calories brûlées, notifications d’appel et message.<br>
+        Compatible Android et iOS 📱.
       </p>
-      <p class="price">8 000 FCFA</p>
-      <a href="https://wa.me/221709306218?text=Je%20veux%20acheter%20les%20écouteurs%20Bluetooth" class="btn-whatsapp">Commander sur WhatsApp</a>
     </div>
-    <img src="produit2.jpg" alt="Écouteurs Bluetooth">
+    <img src="produit1-detail2.jpg" alt="Montre fonctionnalités">
+  </section>
+
+  <!-- 4️⃣ Quatrième section -->
+  <section class="product-section reverse">
+    <div class="product-info">
+      <h2>Autonomie et recharge</h2>
+      <p>
+        Batterie longue durée (jusqu’à 5 jours) 🔋<br>
+        Recharge magnétique rapide avec câble inclus.
+      </p>
+    </div>
+    <img src="produit1-detail3.jpg" alt="Montre charge">
   </section>
 
   <footer>📞 Contact WhatsApp : +221 70 930 6218</footer>
