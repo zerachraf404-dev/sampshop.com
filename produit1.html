@@ -1,243 +1,246 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Détails du produit - Samp Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Détails du produit - Samp Shop</title>
 
-  <!-- Polices modernes -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!-- Polices -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fffefc;
-      color: #333;
+<style>
+  body {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffefc;
+    color:#333;
+  }
+
+  header {
+    background-color: #ff7b00;
+    color: white;
+    text-align:center;
+    padding:25px 15px;
+    font-size:30px;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Section principale produit */
+  .main-product {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    padding:40px 20px;
+  }
+
+  .main-product img {
+    width:320px;
+    border-radius:15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+
+  .main-product img:hover {
+    transform: scale(1.05);
+  }
+
+  .main-product .info {
+    max-width:480px;
+  }
+
+  .main-product .info h2 {
+    font-family:'Pacifico', cursive;
+    font-size:28px;
+    color:#ff7b00;
+    margin-bottom:15px;
+  }
+
+  .main-product .info .price {
+    font-size:24px;
+    font-weight:600;
+    color:#ff7b00;
+  }
+
+  /* Sections détails */
+  .section {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    padding:40px 20px;
+  }
+
+  .section img {
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+  }
+
+  .section img:hover {
+    transform: scale(1.03);
+  }
+
+  .text {
+    max-width:480px;
+  }
+
+  .text h3 {
+    font-family:'Pacifico', cursive;
+    color:#ff7b00;
+    font-size:22px;
+    margin-bottom:12px;
+  }
+
+  .text p {
+    font-size:16px;
+    line-height:1.8;
+    color:#555;
+  }
+
+  /* Détail 1 grand */
+  .detail1 img {
+    width:500px;
+  }
+
+  /* Grandes images */
+  .big img {
+    width:400px;
+  }
+
+  /* Petites images */
+  .small img {
+    width:250px;
+  }
+
+  /* Bouton WhatsApp */
+  .whatsapp {
+    text-align:center;
+    margin:50px 0;
+  }
+
+  .whatsapp a {
+    background-color:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:20px 50px;
+    border-radius:50px;
+    font-size:22px;
+    font-weight:600;
+    box-shadow:0 6px 12px rgba(0,0,0,0.2);
+    transition:0.3s;
+  }
+
+  .whatsapp a:hover {
+    background-color:#1ebe5d;
+    transform:scale(1.05);
+  }
+
+  footer {
+    background-color:#ff7b00;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-top:30px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+  }
+
+  @media(max-width:768px){
+    .main-product,.section {
+      flex-direction:column !important;
+      text-align:center;
     }
-
-    header {
-      background-color: #ff7b00;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 28px;
-      font-family: 'Pacifico', cursive;
-      letter-spacing: 1px;
+    .detail1 img,.big img,.small img {
+      width:90% !important;
+      max-width:450px;
     }
+  }
 
-    /* Image principale + info */
-    .main-product {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .main-product img {
-      width: 320px;
-      border-radius: 15px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-      transition: transform 0.3s;
-    }
-
-    .main-product img:hover {
-      transform: scale(1.05);
-    }
-
-    .main-product .info {
-      max-width: 450px;
-    }
-
-    .main-product .info h2 {
-      font-family: 'Pacifico', cursive;
-      font-size: 26px;
-      margin-bottom: 15px;
-      color: #ff7b00;
-    }
-
-    .main-product .info .price {
-      color: #ff7b00;
-      font-size: 24px;
-      font-weight: 600;
-    }
-
-    /* Sections détails */
-    .section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .section img {
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .section img:hover {
-      transform: scale(1.03);
-    }
-
-    .text {
-      max-width: 450px;
-    }
-
-    .text h3 {
-      color: #ff7b00;
-      font-family: 'Pacifico', cursive;
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .text p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #555;
-    }
-
-    /* Grande image spéciale pour détail 1 */
-    .detail1 img {
-      width: 500px;
-    }
-
-    /* Grandes images normales */
-    .big img {
-      width: 400px;
-    }
-
-    /* Petites images */
-    .small img {
-      width: 250px;
-    }
-
-    /* Bouton WhatsApp */
-    .whatsapp {
-      text-align: center;
-      margin: 50px 0;
-    }
-
-    .whatsapp a {
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 20px 50px;
-      border-radius: 50px;
-      font-size: 22px;
-      font-weight: 600;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      transition: 0.3s;
-    }
-
-    .whatsapp a:hover {
-      background-color: #1ebe5d;
-      transform: scale(1.05);
-    }
-
-    footer {
-      background-color: #ff7b00;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-      font-weight: 600;
-    }
-
-    @media(max-width: 768px) {
-      .main-product, .section {
-        flex-direction: column !important;
-        text-align: center;
-      }
-      .detail1 img, .big img, .small img {
-        width: 90% !important;
-        max-width: 450px;
-      }
-    }
-  </style>
+</style>
 </head>
 <body>
 
-  <header>Tapis De Prière Orthopédique</header>
+<header>Tapis De Prière Orthopédique</header>
 
-  <!-- Image principale + titre + prix -->
-  <section class="main-product">
-    <img src="produit1.jpg" alt="Tapis de prière principal">
-    <div class="info">
-      <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
-      <p class="price">13 000 FCFA</p>
-    </div>
-  </section>
-
-  <!-- Détail 1 : grande image à gauche -->
-  <div class="section detail1" style="flex-direction: row;">
-    <img src="produit1-detail1.jpg" alt="Tapis détail 1">
-    <div class="text">
-      <h3>Prie sans douleur</h3>
-      <p>🌙 Prie sans douleur et retrouve ton khouchou‘ avec le tapis de prière Al-Moufid de luxe ! 🕌</p>
-    </div>
+<!-- Image principale + titre + prix -->
+<section class="main-product">
+  <img src="produit1.jpg" alt="Tapis de prière principal">
+  <div class="info">
+    <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
+    <p class="price">13 000 FCFA</p>
   </div>
+</section>
 
-  <!-- Détail 2 : grande image à droite -->
-  <div class="section big" style="flex-direction: row-reverse;">
-    <div class="text">
-      <h3>Confort optimal</h3>
-      <p>Tu ressens des douleurs aux genoux pendant la prière ? Ton confort te manque et ton recueillement en souffre ?<br><br>
-      ✨ Pour la première fois au Sénégal, découvre le tapis de prière Al-Moufid, au design exclusif et à la technologie innovante, disponible uniquement chez nous !<br><br>
-      Grâce à son rembourrage ultra-confortable et sa texture premium, il t’offre une expérience de prière douce, paisible et sans douleur.<br><br>
-      🧡 Plus de confort.<br>
-      🕋 Plus de sérénité.<br>
-      🙏 Plus de spiritualité.</p>
-    </div>
-    <img src="produit1-detail2.jpg" alt="Tapis détail 2">
+<!-- Détail 1 : grande image à gauche -->
+<div class="section detail1" style="flex-direction:row;">
+  <img src="produit1-detail1.jpg" alt="Tapis détail 1">
+  <div class="text">
+    <h3>Prie sans douleur</h3>
+    <p>🌙 Prie sans douleur et retrouve ton khouchou‘ avec le tapis de prière Al-Moufid de luxe ! 🕌</p>
   </div>
+</div>
 
-  <!-- Détail 3 : grande image normale -->
-  <div class="section big" style="flex-direction: row;">
-    <img src="produit1-detail3.jpg" alt="Tapis détail 3">
-    <div class="text">
-      <h3>Caractéristiques du tapis</h3>
-      <p>✨ Les caractéristiques du tapis de prière Al-Mihrab :<br><br>
-      🔹 Design multicouche innovant :<br>
-      1️⃣ Couche supérieure en velours doux<br>
-      2️⃣ Mousse à mémoire de forme de 8 cm<br>
-      3️⃣ Couche en mousse haute densité (1,5 cm)<br>
-      4️⃣ Base antidérapante</p>
-    </div>
+<!-- Détail 2 : grande image à droite -->
+<div class="section big" style="flex-direction:row-reverse;">
+  <div class="text">
+    <h3>Confort optimal</h3>
+    <p>Tu ressens des douleurs aux genoux pendant la prière ? Ton confort te manque et ton recueillement en souffre ?<br><br>
+    ✨ Pour la première fois au Sénégal, découvre le tapis de prière Al-Moufid, au design exclusif et à la technologie innovante, disponible uniquement chez nous !<br><br>
+    Grâce à son rembourrage ultra-confortable et sa texture premium, il t’offre une expérience de prière douce, paisible et sans douleur.<br><br>
+    🧡 Plus de confort.<br>
+    🕋 Plus de sérénité.<br>
+    🙏 Plus de spiritualité.</p>
   </div>
+  <img src="produit1-detail2.jpg" alt="Tapis détail 2">
+</div>
 
-  <!-- Détail 4 : petite image -->
-  <div class="section small" style="flex-direction: row;">
-    <img src="produit1-detail4.jpg" alt="Tapis détail 4">
-    <div class="text">
-      <h3>Coussin de soutien intégré</h3>
-      <p>Le tapis est équipé d’un coussin épais et flexible intégré, de 8 cm d’épaisseur, fabriqué en mousse à mémoire de forme de haute qualité (Memory Foam).<br>
-      Il offre un soutien optimal aux genoux et réduit la pression sur les articulations, rendant chaque prosternation plus confortable et plus facile.</p>
-    </div>
+<!-- Détail 3 : grande image normale -->
+<div class="section big" style="flex-direction:row;">
+  <img src="produit1-detail3.jpg" alt="Tapis détail 3">
+  <div class="text">
+    <h3>Caractéristiques du tapis</h3>
+    <p>✨ Les caractéristiques du tapis de prière Al-Mihrab :<br>
+    🔹 Design multicouche innovant :<br>
+    1️⃣ Couche supérieure en velours doux<br>
+    2️⃣ Mousse à mémoire de forme de 8 cm<br>
+    3️⃣ Couche en mousse haute densité (1,5 cm)<br>
+    4️⃣ Base antidérapante</p>
   </div>
+</div>
 
-  <!-- Détail 5 : petite image -->
-  <div class="section small" style="flex-direction: row-reverse;">
-    <div class="text">
-      <h3>Aération et entretien</h3>
-      <p>🔹 Aération intelligente : matériaux respirants pour garder frais pendant la prière.<br>
-      🔹 Facile à nettoyer : housse amovible avec fermeture éclair.<br>
-      🔹 Design élégant et luxueux : tissu en velours de qualité supérieure.</p>
-    </div>
-    <img src="produit1-detail5.jpg" alt="Tapis détail 5">
+<!-- Détail 4 : petite image -->
+<div class="section small" style="flex-direction:row;">
+  <img src="produit1-detail4.jpg" alt="Tapis détail 4">
+  <div class="text">
+    <h3>Coussin de soutien intégré</h3>
+    <p>Le tapis est équipé d’un coussin épais et flexible intégré, de 8 cm d’épaisseur, fabriqué en mousse à mémoire de forme de haute qualité (Memory Foam).<br>
+    Il offre un soutien optimal aux genoux et réduit la pression sur les articulations, rendant chaque prosternation plus confortable et plus facile.</p>
   </div>
+</div>
 
-  <!-- Bouton WhatsApp -->
-  <div class="whatsapp">
-    <a href="https://wa.me/221709306218?text=Bonjour%2C%20je%20souhaite%20commander%20le%20Tapis%20de%20Prière%20Orthopédique%20Samp%20Shop.">📦 Commander ici</a>
+<!-- Détail 5 : petite image -->
+<div class="section small" style="flex-direction:row-reverse;">
+  <div class="text">
+    <h3>Aération et entretien</h3>
+    <p>🔹 Aération intelligente : matériaux respirants pour garder frais pendant la prière.<br>
+    🔹 Facile à nettoyer : housse amovible avec fermeture éclair.<br>
+    🔹 Design élégant et luxueux : tissu en velours de qualité supérieure.</p>
   </div>
+  <img src="produit1-detail5.jpg" alt="Tapis détail 5">
+</div>
 
-  <footer>© 2025 Samp Shop - Tous droits réservés</footer>
+<!-- Bouton WhatsApp -->
+<div class="whatsapp">
+  <a href="https://wa.me/221709306218?text=Bonjour%2C%20je%20souhaite%20commander%20le%20Tapis%20de%20Prière%20Orthopédique%20Samp%20Shop.">📦 Commander ici</a>
+</div>
+
+<footer>© 2025 Samp Shop - Tous droits réservés</footer>
 
 </body>
 </html>
