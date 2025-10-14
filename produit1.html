@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Détails du produit - Samp Shop</title>
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -23,10 +22,14 @@
       font-weight: bold;
     }
 
-    /* Image principale du produit */
+    /* Section image principale + titre + prix */
     .main-product {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 40px 20px;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
     .main-product img {
@@ -35,11 +38,20 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
 
-    .price {
+    .main-product .info {
+      max-width: 400px;
+    }
+
+    .main-product .info h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #ff7b00;
+    }
+
+    .main-product .info .price {
       color: #ff7b00;
       font-size: 24px;
       font-weight: bold;
-      margin-top: 15px;
     }
 
     /* Sections détails */
@@ -66,9 +78,9 @@
       max-width: 400px;
     }
 
-    .text h2 {
+    .text h3 {
       color: #ff7b00;
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 10px;
     }
 
@@ -77,7 +89,12 @@
       line-height: 1.5;
     }
 
-    /* Grandes images */
+    /* Grande image spéciale pour détail 1 */
+    .detail1 img {
+      width: 500px;
+    }
+
+    /* Grandes images normales */
     .big img {
       width: 400px;
     }
@@ -118,85 +135,92 @@
       margin-top: 30px;
     }
 
-    /* Responsiveness */
     @media(max-width: 768px) {
-      .section {
-        flex-direction: column !important;
+      .main-product {
+        flex-direction: column;
+        text-align: center;
       }
-      .big img, .small img {
+      .detail1 img, .big img, .small img {
         width: 90% !important;
-        max-width: 350px;
+        max-width: 450px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>Montre connectée - Détails du produit</header>
+  <header>Tapis De Prière Orthopédique</header>
 
-  <!-- Image principale -->
+  <!-- Image principale + titre + prix -->
   <section class="main-product">
-    <img src="produit1.jpg" alt="Montre connectée principale">
-    <p class="price">10 000 FCFA</p>
+    <img src="produit1.jpg" alt="Tapis de prière principal">
+    <div class="info">
+      <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
+      <p class="price">13 000 FCFA</p>
+    </div>
   </section>
 
-  <!-- 1ère grande image à droite -->
+  <!-- Détail 1 : grande image à gauche -->
+  <div class="section detail1" style="flex-direction: row;">
+    <img src="produit-detail1.jpg" alt="Tapis détail 1">
+    <div class="text">
+      <h3>Prie sans douleur</h3>
+      <p>🌙 Prie sans douleur et retrouve ton khouchou‘ avec le tapis de prière Al-Moufid de luxe ! 🕌</p>
+    </div>
+  </div>
+
+  <!-- Détail 2 : grande image à droite -->
   <div class="section big" style="flex-direction: row-reverse;">
     <div class="text">
-      <h2>Design élégant et moderne</h2>
-      <p>Cette montre connectée allie confort et style. Parfaite pour toutes les occasions, elle s’adapte à ton poignet tout en offrant un écran tactile fluide et lumineux.</p>
+      <h3>Confort optimal</h3>
+      <p>Tu ressens des douleurs aux genoux pendant la prière ? Ton confort te manque et ton recueillement en souffre ?<br><br>
+      ✨ Pour la première fois au Sénégal, découvre le tapis de prière Al-Moufid, au design exclusif et à la technologie innovante, disponible uniquement chez nous !<br><br>
+      Grâce à son rembourrage ultra-confortable et sa texture premium, il t’offre une expérience de prière douce, paisible et sans douleur.<br><br>
+      🧡 Plus de confort.<br>
+      🕋 Plus de sérénité.<br>
+      🙏 Plus de spiritualité.</p>
     </div>
-    <img src="produit1-detail1.jpg" alt="Montre design">
+    <img src="produit-detail2.jpg" alt="Tapis détail 2">
   </div>
 
-  <!-- 2ème grande image à gauche -->
+  <!-- Détail 3 : grande image normale -->
   <div class="section big" style="flex-direction: row;">
-    <img src="produit1-detail2.jpg" alt="Montre fonctionnalités">
+    <img src="produit-detail3.jpg" alt="Tapis détail 3">
     <div class="text">
-      <h2>Fonctionnalités avancées</h2>
-      <p>Mesure ton rythme cardiaque, ton sommeil et ton activité physique. Reçois tes notifications en temps réel grâce à sa connectivité Bluetooth stable.</p>
+      <h3>Caractéristiques du tapis</h3>
+      <p>✨ Les caractéristiques du tapis de prière Al-Mihrab :<br><br>
+      🔹 Design multicouche innovant :<br>
+      1️⃣ Couche supérieure en velours doux<br>
+      2️⃣ Mousse à mémoire de forme de 8 cm<br>
+      3️⃣ Couche en mousse haute densité (1,5 cm)<br>
+      4️⃣ Base antidérapante</p>
     </div>
   </div>
 
-  <!-- 3ème grande image à droite -->
-  <div class="section big" style="flex-direction: row-reverse;">
+  <!-- Détail 4 : petite image -->
+  <div class="section small" style="flex-direction: row;">
+    <img src="produit-detail4.jpg" alt="Tapis détail 4">
     <div class="text">
-      <h2>Autonomie longue durée</h2>
-      <p>Profite de plus de 7 jours d’autonomie grâce à sa batterie haute capacité.</p>
-    </div>
-    <img src="produit1-detail3.jpg" alt="Batterie longue durée">
-  </div>
-
-  <!-- 4ème grande image à gauche -->
-  <div class="section big" style="flex-direction: row;">
-    <img src="produit1-detail4.jpg" alt="Montre au poignet">
-    <div class="text">
-      <h2>Confort et légèreté</h2>
-      <p>Avec son bracelet doux et léger, cette montre est agréable à porter toute la journée.</p>
+      <h3>Coussin de soutien intégré</h3>
+      <p>Le tapis est équipé d’un coussin épais et flexible intégré, de 8 cm d’épaisseur, fabriqué en mousse à mémoire de forme de haute qualité (Memory Foam).<br>
+      Il offre un soutien optimal aux genoux et réduit la pression sur les articulations, rendant chaque prosternation plus confortable et plus facile.</p>
     </div>
   </div>
 
-  <!-- 1ère petite image à droite -->
+  <!-- Détail 5 : petite image -->
   <div class="section small" style="flex-direction: row-reverse;">
     <div class="text">
-      <h2>Matériaux de qualité</h2>
-      <p>Boîtier en aluminium léger et résistant, parfait pour un usage quotidien.</p>
+      <h3>Aération et entretien</h3>
+      <p>🔹 Aération intelligente : matériaux respirants pour garder frais pendant la prière.<br>
+      🔹 Facile à nettoyer : housse amovible avec fermeture éclair.<br>
+      🔹 Design élégant et luxueux : tissu en velours de qualité supérieure.</p>
     </div>
-    <img src="produit1-detail5.jpg" alt="Matériaux montre">
-  </div>
-
-  <!-- 2ème petite image à gauche -->
-  <div class="section small" style="flex-direction: row;">
-    <img src="produit1-detail6.jpg" alt="Montre vue d'ensemble">
-    <div class="text">
-      <h2>Prêt à porter partout</h2>
-      <p>Design compact et élégant, idéal pour le sport, le travail ou les sorties.</p>
-    </div>
+    <img src="produit-detail5.jpg" alt="Tapis détail 5">
   </div>
 
   <!-- Bouton WhatsApp -->
   <div class="whatsapp">
-    <a href="https://wa.me/221709306218?text=Bonjour%2C%20je%20souhaite%20commander%20la%20montre%20connect%C3%A9e%20Samp%20Shop.">📦 Commander ici</a>
+    <a href="https://wa.me/221709306218?text=Bonjour%2C%20je%20souhaite%20commander%20le%20Tapis%20de%20Prière%20Orthopédique%20Samp%20Shop.">📦 Commander ici</a>
   </div>
 
   <footer>© 2025 Samp Shop - Tous droits réservés</footer>
