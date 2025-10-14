@@ -17,15 +17,36 @@
     color:#333;
   }
 
+  /* Header avec logo et titre du site */
   header {
     background-color: #ff7b00;
     color: white;
-    text-align:center;
-    padding:25px 15px;
-    font-size:30px;
-    font-family: 'Saltern', cursive;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .logo-left img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .site-name h1 {
+    font-family: 'Saltern', cursive;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  /* Titre du produit */
+  .product-title {
+    text-align: center;
+    font-family: 'Saltern', cursive;
+    color: #ff7b00;
+    font-size: 32px;
+    margin: 20px 0;
   }
 
   /* Section principale produit */
@@ -167,7 +188,18 @@
 </head>
 <body>
 
-<header>Tapis De Prière Orthopédique</header>
+<!-- Header avec logo et nom du site -->
+<header>
+  <div class="logo-left">
+    <img src="monlogo.jpg" alt="Logo Samp Shop">
+  </div>
+  <div class="site-name">
+    <h1>Samp Shop</h1>
+  </div>
+</header>
+
+<!-- Nom du produit -->
+<h2 class="product-title">Tapis De Prière Orthopédique</h2>
 
 <!-- Image principale + titre + prix -->
 <section class="main-product">
