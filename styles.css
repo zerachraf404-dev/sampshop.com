@@ -1,8 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+
+  display: flex;          /* transforme body en flex container */
+  flex-direction: column; /* aligne header, contenu, footer verticalement */
+  min-height: 100vh;      /* prend toute la hauteur de la fenêtre */
+
 }
 
 header {
