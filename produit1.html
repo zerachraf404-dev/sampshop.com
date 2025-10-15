@@ -25,9 +25,8 @@
   .arrow-left { left: -50px; }
   .arrow-right { right: -50px; }
 
-  /* Section principale avec carrousel à gauche et info à droite */
   .main-product { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:center; gap:30px; padding:40px 20px; }
-  .main-product .info { flex:1; min-width:250px; }
+  .main-product .info { flex:1; min-width:250px; display:flex; flex-direction:column; justify-content:space-between; }
 
   /* Cadre titre produit */
   .main-product .info h2 {
@@ -41,7 +40,7 @@
     margin-bottom: 20px;
   }
 
-  /* Cadre prix avec vibration */
+  /* Cadre prix avec vibration légère */
   .main-product .info .price {
     background-color: #fff4e0;
     color: #000;
@@ -51,15 +50,16 @@
     font-size: 28px;
     font-weight: 700;
     display: inline-block;
-    animation: vibrate 0.3s infinite;
+    align-self:center;
+    animation: vibrate 0.5s infinite;
   }
 
   @keyframes vibrate {
     0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
+    20% { transform: translate(-1px, 1px); }
+    40% { transform: translate(-1px, -1px); }
+    60% { transform: translate(1px, 1px); }
+    80% { transform: translate(1px, -1px); }
     100% { transform: translate(0); }
   }
 
@@ -116,7 +116,7 @@
   </div>
 
   <div class="info">
-    <h2>🕌 Tapis de prière confortable</h2>
+    <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
     <p class="price">13 000 FCFA</p>
   </div>
 </section>
