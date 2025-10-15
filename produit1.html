@@ -4,129 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Détails du produit - Samp Shop</title>
-
-<!-- Polices -->
 <link href="https://fonts.googleapis.com/css2?family=Saltern&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
-  body {
-    margin:0;
-    padding:0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #fffefc;
-    color:#333;
-  }
-
-  header {
-    background-color: #ff7b00;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-
+  body { margin:0; padding:0; font-family: 'Poppins', sans-serif; background-color: #fffefc; color:#333; }
+  header { background-color: #ff7b00; color: white; display: flex; align-items: center; gap: 15px; padding: 15px 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
   .logo-left img { width: 80px; height: 80px; border-radius: 50%; }
   .site-name h1 { font-family: 'Saltern', cursive; font-size: 30px; margin: 0; }
+  .product-title { text-align: center; font-family: 'Saltern', cursive; color: #ff7b00; font-size: 32px; margin: 20px 0; }
 
-  .product-title {
-    text-align: center;
-    font-family: 'Saltern', cursive;
-    color: #ff7b00;
-    font-size: 32px;
-    margin: 20px 0;
-  }
-
-  .main-product {
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:center;
-    gap:30px;
-    padding:40px 20px;
-  }
-
-  /* === Carrousel photo + vidéo === */
-  .media-container {
-    position: relative;
-    width: 320px;
-    border-radius:15px;
-    overflow: hidden;
-  }
-
+  /* Carrousel principal */
+  .carousel { position: relative; width: 320px; margin: 0 auto; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
   .carousel-item { display: none; width: 100%; }
   .carousel-item.active { display: block; }
-  .carousel img, .carousel video {
-    width: 100%;
-    border-radius:15px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-  }
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    font-size: 30px;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    user-select: none;
-  }
-  .carousel-btn.prev { left: 10px; }
-  .carousel-btn.next { right: 10px; }
+  .carousel video, .carousel img { width: 100%; display: block; border-radius: 15px; }
+  .arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 30px; color: #ff7b00; background-color: rgba(255,255,255,0.7); padding: 5px 12px; border-radius: 50%; cursor: pointer; user-select: none; }
+  .arrow-left { left: -40px; }
+  .arrow-right { right: -40px; }
 
+  .main-product { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px; padding:40px 20px; }
   .main-product .info { max-width:480px; }
   .main-product .info h2 { font-family:'Saltern', cursive; font-size:28px; color:#ff7b00; margin-bottom:15px; }
-  .main-product .info .price { font-size:28px; font-weight:700; color:#000; } /* prix en noir et plus grand */
+  .main-product .info .price { font-size:28px; font-weight:700; color:#000; }
 
+  /* Sections détails */
   .section { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px; padding:40px 20px; }
   .section img { border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s; }
   .section img:hover { transform: scale(1.03); }
   .text { max-width:480px; }
   .text h3 { font-family:'Saltern', cursive; color:#ff7b00; font-size:22px; margin-bottom:12px; }
   .text p { font-size:16px; line-height:1.8; color:#555; }
-
   .detail1 img { width:500px; }
   .big img { width:400px; }
   .small img { width:250px; }
 
+  /* Dernière image centrée */
+  .last-section { text-align:center; padding:50px 20px; }
+  .last-section img { width: 300px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
+  .last-section p { margin-top:15px; font-size:18px; font-weight:600; color:#ff7b00; }
+
   .whatsapp { text-align:center; margin:50px 0; }
-  .whatsapp a {
-    background-color:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:20px 50px;
-    border-radius:50px;
-    font-size:22px;
-    font-weight:600;
-    box-shadow:0 6px 12px rgba(0,0,0,0.2);
-    transition:0.3s;
-  }
+  .whatsapp a { background-color:#25D366; color:white; text-decoration:none; padding:20px 50px; border-radius:50px; font-size:22px; font-weight:600; box-shadow:0 6px 12px rgba(0,0,0,0.2); transition:0.3s; }
   .whatsapp a:hover { background-color:#1ebe5d; transform:scale(1.05); }
 
-  /* LIVRAISON GRATUITE/PAYEMENT A LA LIVRAISON */
-  .free-delivery { text-align:center; margin:40px 0; }
-  .free-delivery img { width:120px; border-radius:12px; margin-bottom:10px; }
-  .free-delivery span { display:block; font-size:20px; font-weight:700; color:#ff7b00; }
+  footer { background-color:#ff7b00; color:white; text-align:center; padding:15px; font-weight:600; margin-top:30px; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); font-family:'Saltern', cursive; }
 
-  footer {
-    background-color:#ff7b00;
-    color:white;
-    text-align:center;
-    padding:15px;
-    font-weight:600;
-    margin-top:30px;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
-    font-family:'Saltern', cursive;
-  }
-
-  @media(max-width:768px){
-    .main-product,.section { flex-direction:column !important; text-align:center; }
-    .detail1 img,.big img,.small img { width:90% !important; max-width:450px; }
-  }
+  @media(max-width:768px){ .main-product,.section { flex-direction:column !important; text-align:center; } .detail1 img,.big img,.small img { width:90% !important; max-width:450px; } .arrow { font-size:24px; left:-25px; right:-25px; } }
 </style>
 </head>
 <body>
@@ -140,55 +62,79 @@
 
 <!-- Carrousel photo + vidéo -->
 <section class="main-product">
-  <div class="media-container">
-    <div class="carousel">
-      <div class="carousel-item active">
-        <img src="produit1.jpg" alt="Tapis de prière principal">
-      </div>
-      <div class="carousel-item">
-        <video controls>
-          <source src="produit1.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
-    <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+  <div class="carousel">
+    <div class="carousel-item active"><img src="produit1.jpg" alt="Tapis de prière principal"></div>
+    <div class="carousel-item"><video src="produit1.mp4" controls></video></div>
+    <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
   </div>
-
   <div class="info">
     <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
     <p class="price">13 000 FCFA</p>
   </div>
 </section>
 
-<!-- Sections détails (inchangées) -->
+<!-- Sections détails -->
 <div class="section detail1" style="flex-direction:row;">
   <img src="produit1-detail1.jpg" alt="Tapis détail 1">
-  <div class="text"><h3>Prie sans douleur</h3><p>🌙 Prie sans douleur et retrouve ton khouchou‘ avec le tapis de prière Al-Moufid de luxe ! 🕌</p></div>
+  <div class="text">
+    <h3>Prie sans douleur</h3>
+    <p>🌙 Prie sans douleur et retrouve ton khouchou‘ avec le tapis de prière Al-Moufid de luxe ! 🕌</p>
+  </div>
 </div>
+
 <div class="section big" style="flex-direction:row-reverse;">
-  <div class="text"><h3>Confort optimal</h3><p>Tu ressens des douleurs aux genoux pendant la prière ? ...</p></div>
+  <div class="text">
+    <h3>Confort optimal</h3>
+    <p>Tu ressens des douleurs aux genoux pendant la prière ? Ton confort te manque et ton recueillement en souffre ?<br><br>
+    ✨ Pour la première fois au Sénégal, découvre le tapis de prière Al-Moufid, au design exclusif et à la technologie innovante, disponible uniquement chez nous !<br><br>
+    Grâce à son rembourrage ultra-confortable et sa texture premium, il t’offre une expérience de prière douce, paisible et sans douleur.<br><br>
+    🧡 Plus de confort.<br>
+    🕋 Plus de sérénité.<br>
+    🙏 Plus de spiritualité.</p>
+  </div>
   <img src="produit1-detail2.jpg" alt="Tapis détail 2">
 </div>
+
 <div class="section big" style="flex-direction:row;">
   <img src="produit1-detail3.jpg" alt="Tapis détail 3">
-  <div class="text"><h3>Caractéristiques du tapis</h3><p>✨ Les caractéristiques du tapis de prière Al-Mihrab ...</p></div>
+  <div class="text">
+    <h3>Caractéristiques du tapis</h3>
+    <p>✨ Les caractéristiques du tapis de prière Al-Mihrab :<br>
+    🔹 Design multicouche innovant :<br>
+    1️⃣ Couche supérieure en velours doux<br>
+    2️⃣ Mousse à mémoire de forme de 8 cm<br>
+    3️⃣ Couche en mousse haute densité (1,5 cm)<br>
+    4️⃣ Base antidérapante</p>
+  </div>
 </div>
+
 <div class="section small" style="flex-direction:row;">
   <img src="produit1-detail4.jpg" alt="Tapis détail 4">
-  <div class="text"><h3>Coussin de soutien intégré</h3><p>Le tapis est équipé d’un coussin épais ...</p></div>
+  <div class="text">
+    <h3>Coussin de soutien intégré</h3>
+    <p>Le tapis est équipé d’un coussin épais et flexible intégré, de 8 cm d’épaisseur, fabriqué en mousse à mémoire de forme de haute qualité (Memory Foam).<br>
+    Il offre un soutien optimal aux genoux et réduit la pression sur les articulations, rendant chaque prosternation plus confortable et plus facile.</p>
+  </div>
 </div>
+
 <div class="section small" style="flex-direction:row-reverse;">
-  <div class="text"><h3>Aération et entretien</h3><p>🔹 Aération intelligente ...</p></div>
+  <div class="text">
+    <h3>Aération et entretien</h3>
+    <p>🔹 Aération intelligente : matériaux respirants pour garder frais pendant la prière.<br>
+    🔹 Facile à nettoyer : housse amovible avec fermeture éclair.<br>
+    🔹 Design élégant et luxueux : tissu en velours de qualité supérieure.</p>
+  </div>
   <img src="produit1-detail5.jpg" alt="Tapis détail 5">
 </div>
 
-<!-- LIVRAISON GRATUITE -->
-<div class="free-delivery">
-  <img src="produit1-detail6.jpg" alt="Produit livraison gratuite">
-  <span>LIVRAISON GRATUITE</span>
+<!-- Dernière image centrée -->
+<div class="last-section">
+  <img src="produit1-detail6.jpg" alt="Dernier détail produit">
+  <p>LIVRAISON GRATUITE / PAYEMENT A LA LIVRAISON</p>
 </div>
 
+<!-- Bouton WhatsApp -->
 <div class="whatsapp">
   <a href="https://wa.me/221709306218?text=Bonjour%2C%20je%20souhaite%20commander%20le%20Tapis%20de%20Prière%20Orthopédique%20Samp%20Shop.">📦 Commander ici</a>
 </div>
@@ -196,24 +142,24 @@
 <footer> Samp Shop - Meilleur Articles Du Sénégal</footer>
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-item');
+let slideIndex = 0;
+const slides = document.querySelectorAll(".carousel-item");
 
-function showSlide(index){
-  slides.forEach((slide,i)=>slide.classList.toggle('active',i===index));
+function showSlide(n){
+  slides.forEach(s => s.classList.remove("active"));
+  slides[n].classList.add("active");
 }
 
 function nextSlide(){
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
 }
 
 function prevSlide(){
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  showSlide(slideIndex);
 }
 </script>
 
 </body>
 </html>
-
