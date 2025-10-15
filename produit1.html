@@ -13,13 +13,14 @@
   .product-title { text-align: center; font-family: 'Saltern', cursive; color: #ff7b00; font-size: 32px; margin: 20px 0; }
 
   /* Carrousel principal */
-  .carousel { position: relative; width: 320px; margin: 0 auto; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
+  .carousel-wrapper { position: relative; width: 320px; margin: 0 auto; }
+  .carousel { overflow: hidden; border-radius: 15px; box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
   .carousel-item { display: none; width: 100%; }
   .carousel-item.active { display: block; }
   .carousel video, .carousel img { width: 100%; display: block; border-radius: 15px; }
   .arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 30px; color: #ff7b00; background-color: rgba(255,255,255,0.7); padding: 5px 12px; border-radius: 50%; cursor: pointer; user-select: none; }
-  .arrow-left { left: -40px; }
-  .arrow-right { right: -40px; }
+  .arrow-left { left: -50px; }
+  .arrow-right { right: -50px; }
 
   .main-product { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px; padding:40px 20px; }
   .main-product .info { max-width:480px; }
@@ -39,7 +40,7 @@
 
   /* Dernière image centrée */
   .last-section { text-align:center; padding:50px 20px; }
-  .last-section img { width: 300px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
+  .last-section img { width:450px; max-width:90%; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
   .last-section p { margin-top:15px; font-size:18px; font-weight:600; color:#ff7b00; }
 
   .whatsapp { text-align:center; margin:50px 0; }
@@ -48,7 +49,11 @@
 
   footer { background-color:#ff7b00; color:white; text-align:center; padding:15px; font-weight:600; margin-top:30px; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); font-family:'Saltern', cursive; }
 
-  @media(max-width:768px){ .main-product,.section { flex-direction:column !important; text-align:center; } .detail1 img,.big img,.small img { width:90% !important; max-width:450px; } .arrow { font-size:24px; left:-25px; right:-25px; } }
+  @media(max-width:768px){ 
+    .main-product,.section { flex-direction:column !important; text-align:center; } 
+    .detail1 img,.big img,.small img { width:90% !important; max-width:450px; } 
+    .arrow { font-size:24px; left:-25px; right:-25px; } 
+  }
 </style>
 </head>
 <body>
@@ -62,12 +67,15 @@
 
 <!-- Carrousel photo + vidéo -->
 <section class="main-product">
-  <div class="carousel">
-    <div class="carousel-item active"><img src="produit1.jpg" alt="Tapis de prière principal"></div>
-    <div class="carousel-item"><video src="produit1.mp4" controls></video></div>
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      <div class="carousel-item active"><img src="produit1.jpg" alt="Tapis de prière principal"></div>
+      <div class="carousel-item"><video src="produit1.mp4" controls></video></div>
+    </div>
     <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
     <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
   </div>
+
   <div class="info">
     <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
     <p class="price">13 000 FCFA</p>
@@ -128,7 +136,7 @@
   <img src="produit1-detail5.jpg" alt="Tapis détail 5">
 </div>
 
-<!-- Dernière image centrée -->
+<!-- Dernière image centrée et agrandie -->
 <div class="last-section">
   <img src="produit1-detail6.jpg" alt="Dernier détail produit">
   <p>LIVRAISON GRATUITE / PAYEMENT A LA LIVRAISON</p>
