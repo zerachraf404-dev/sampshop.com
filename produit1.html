@@ -70,7 +70,12 @@
   <div class="carousel-wrapper">
     <div class="carousel">
       <div class="carousel-item active"><img src="produit1.jpg" alt="Tapis de prière principal"></div>
-      <div class="carousel-item"><video src="produit1.mp4" controls></video></div>
+      <div class="carousel-item">
+  <video controls preload="metadata" width="100%">
+    <source src="produit1.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+</div>
     </div>
     <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
     <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
@@ -171,3 +176,4 @@ function prevSlide(){
 
 </body>
 </html>
+
