@@ -5,29 +5,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Détails du produit - Samp Shop</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Samy&display=swap" rel="stylesheet">
+<!-- Police professionnelle : Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  body { margin:0; padding:0; font-family: 'Poppins', sans-serif; background-color: #fffefc; color:#333; }
-  header { background-color: #ff7b00; color: white; display: flex; align-items: center; gap: 15px; padding: 15px 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+  body { 
+    margin:0; 
+    padding:0; 
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #fffefc; 
+    color:#333; 
+  }
+
+  header { 
+    background-color: #ff7b00; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    padding: 15px 30px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  }
+
   .logo-left img { width: 80px; height: 80px; border-radius: 50%; }
-  .site-name h1 { font-family: 'Samy', cursive; font-size: 30px; margin: 0; }
-  .product-title { text-align: center; font-family: 'Samy', cursive; color: #ff7b00; font-size: 32px; margin: 20px 0; }
+
+  .site-name h1 { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 30px; 
+    font-weight: 700;
+    margin: 0; 
+    letter-spacing: 1px;
+  }
+
+  .product-title { 
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif; 
+    color: #ff7b00; 
+    font-size: 32px; 
+    font-weight: 700;
+    margin: 20px 0; 
+  }
 
   .carousel-wrapper { position: relative; width:100%; }
   .carousel { overflow: hidden; border-radius: 15px; box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
   .carousel-item { display: none; width: 100%; }
   .carousel-item.active { display: block; }
   .carousel img { width: 100%; display: block; border-radius: 15px; }
-  .arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 30px; color: #ff7b00; background-color: rgba(255,255,255,0.7); padding: 5px 12px; border-radius: 50%; cursor: pointer; user-select: none; }
+
+  .arrow { 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 30px; 
+    color: #ff7b00; 
+    background-color: rgba(255,255,255,0.7); 
+    padding: 5px 12px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    user-select: none; 
+  }
+
   .arrow-left { left: -50px; }
   .arrow-right { right: -50px; }
 
-  .main-product { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:center; gap:30px; padding:40px 20px; }
-  .main-product .info { flex:1; min-width:250px; display:flex; flex-direction:column; justify-content:space-between; align-items:center; }
+  .main-product { 
+    display:flex; 
+    flex-wrap:wrap; 
+    align-items:flex-start; 
+    justify-content:center; 
+    gap:30px; 
+    padding:40px 20px; 
+  }
+
+  .main-product .info { 
+    flex:1; 
+    min-width:250px; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-between; 
+    align-items:center; 
+  }
 
   .main-product .info h2 {
-    font-family:'Samy', cursive;
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
     background-color: #ffefcc;
     color: #ff7b00;
     padding: 10px 15px;
@@ -89,9 +150,33 @@
     display:inline-block;
     margin-top:15px;
   }
+
   .whatsapp a:hover { background-color:#1ebe5d; transform:scale(1.05); }
 
-  footer { background-color:#ff7b00; color:white; text-align:center; padding:15px; font-weight:600; margin-top:30px; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); font-family:'Samy', cursive; }
+  .text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .text h3 {
+    font-weight: 600;
+    color:#ff7b00;
+    font-size:22px;
+    margin-bottom:12px;
+  }
+
+  footer { 
+    background-color:#ff7b00; 
+    color:white; 
+    text-align:center; 
+    padding:15px; 
+    font-weight:600; 
+    margin-top:30px; 
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2); 
+    font-family:'Montserrat', sans-serif; 
+  }
 
   @media(max-width:768px){ 
     .main-product,.section { flex-direction:column !important; text-align:center; } 
@@ -125,7 +210,6 @@
     <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
     <p class="price">11 000 FCFA</p>
 
-    <!-- Image et bouton déplacés ici -->
     <div class="last-section-infos">
       <img src="produit1-detail6.jpg" alt="Dernier détail produit">
       <p>LIVRAISON GRATUITE / PAYEMENT À LA LIVRAISON</p>
