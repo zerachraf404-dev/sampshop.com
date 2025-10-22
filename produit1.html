@@ -82,7 +82,7 @@
     100% { transform: translate(0); }
   }
 
-  /* --- Formulaire commande --- */
+  /* --- Formulaire commande (2 colonnes) --- */
   .order-form {
     background:#fffefc; border:2px solid #ddd;
     border-radius:12px; padding:20px; width:100%;
@@ -92,13 +92,24 @@
     text-align:center; color:#0f5132; font-weight:700;
     margin-bottom:10px;
   }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 15px;
+  }
+
   .order-form label {
-    display:block; margin-top:10px; font-weight:600;
+    display:block; font-weight:600; margin-bottom:5px;
   }
   .order-form input {
     width:100%; padding:10px; border-radius:8px;
-    border:1px solid #ccc; margin-top:5px;
+    border:1px solid #ccc;
   }
+  .order-form .full-width {
+    grid-column: span 2;
+  }
+
   .order-form button {
     width:100%; background-color:#25D366; color:white;
     border:none; padding:15px; border-radius:10px;
@@ -141,6 +152,7 @@
     .section img { width:90% !important; max-width:450px; }
     .arrow { font-size:24px; left:-25px; right:-25px; }
     .text { margin:15px 0 !important; }
+    .form-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -169,24 +181,31 @@
     <h2>🕌 Tapis de prière confortable avec soutien complet pour les genoux</h2>
     <p class="price">11 000 FCFA</p>
 
-    <!-- ✅ Formulaire de commande -->
+    <!-- ✅ Formulaire 2 colonnes -->
     <form class="order-form" action="https://formsubmit.co/kotedesign2@gmail.com" method="POST">
       <h3>🛍️ Commande ton tapis maintenant</h3>
-
-      <label for="nom">Nom et prénom :</label>
-      <input type="text" name="Nom et prénom" id="nom" required>
-
-      <label for="tel">Numéro de téléphone :</label>
-      <input type="tel" name="Téléphone" id="tel" required>
-
-      <label for="whatsapp">Numéro WhatsApp :</label>
-      <input type="tel" name="WhatsApp" id="whatsapp" required>
-
-      <label for="adresse">Adresse complète :</label>
-      <input type="text" name="Adresse" id="adresse" required>
-
-      <label for="quantite">Quantité :</label>
-      <input type="number" name="Quantité" id="quantite" value="1" min="1" required>
+      <div class="form-grid">
+        <div>
+          <label for="nom">Nom et prénom :</label>
+          <input type="text" name="Nom et prénom" id="nom" required>
+        </div>
+        <div>
+          <label for="tel">Téléphone :</label>
+          <input type="tel" name="Téléphone" id="tel" required>
+        </div>
+        <div>
+          <label for="whatsapp">WhatsApp :</label>
+          <input type="tel" name="WhatsApp" id="whatsapp" required>
+        </div>
+        <div>
+          <label for="quantite">Quantité :</label>
+          <input type="number" name="Quantité" id="quantite" value="1" min="1" required>
+        </div>
+        <div class="full-width">
+          <label for="adresse">Adresse complète :</label>
+          <input type="text" name="Adresse" id="adresse" required>
+        </div>
+      </div>
 
       <input type="hidden" name="_next" value="https://ton-site.github.io/sampshop/merci.html">
       <input type="hidden" name="_captcha" value="false">
@@ -200,58 +219,6 @@
     </div>
   </div>
 </section>
-
-<!-- -------- Autres sections descriptives -------- -->
-<div class="section detail1">
-  <img src="produit1-detail1.jpg" alt="Tapis détail 1">
-  <div class="text">
-    <h3>Prie sans douleur</h3>
-    <p>🌙 Prie sans douleur et retrouve ton khouchou‘ avec le tapis de prière Al-Moufid de luxe ! 🕌</p>
-  </div>
-</div>
-
-<div class="section big" style="flex-direction:row-reverse;">
-  <div class="text">
-    <h3>Confort optimal</h3>
-    <p>Tu ressens des douleurs aux genoux pendant la prière ? Ton confort te manque et ton recueillement en souffre ?<br><br>
-    ✨ Pour la première fois au Sénégal, découvre le tapis de prière Al-Moufid, au design exclusif et à la technologie innovante.<br><br>
-    Grâce à son rembourrage ultra-confortable et sa texture premium, il t’offre une expérience de prière douce, paisible et sans douleur.<br><br>
-    🧡 Plus de confort.<br> 🕋 Plus de sérénité.<br> 🙏 Plus de spiritualité.</p>
-  </div>
-  <img src="produit1-detail2.jpg" alt="Tapis détail 2">
-</div>
-
-<div class="section big">
-  <img src="produit1-detail3.jpg" alt="Tapis détail 3">
-  <div class="text">
-    <h3>Caractéristiques du tapis</h3>
-    <p>✨ Les caractéristiques du tapis de prière Al-Mihrab :<br>
-    🔹 Design multicouche innovant :<br>
-    1️⃣ Couche supérieure en velours doux<br>
-    2️⃣ Mousse à mémoire de forme de 8 cm<br>
-    3️⃣ Couche en mousse haute densité (1,5 cm)<br>
-    4️⃣ Base antidérapante</p>
-  </div>
-</div>
-
-<div class="section small">
-  <img src="produit1-detail4.jpg" alt="Tapis détail 4">
-  <div class="text">
-    <h3>Coussin de soutien intégré</h3>
-    <p>Le tapis est équipé d’un coussin épais et flexible intégré, fabriqué en mousse à mémoire de forme de haute qualité.<br>
-    Il offre un soutien optimal aux genoux et réduit la pression sur les articulations.</p>
-  </div>
-</div>
-
-<div class="section small" style="flex-direction:row-reverse;">
-  <div class="text">
-    <h3>Aération et entretien</h3>
-    <p>🔹 Aération intelligente : matériaux respirants pour garder frais pendant la prière.<br>
-    🔹 Facile à nettoyer : housse amovible avec fermeture éclair.<br>
-    🔹 Design élégant et luxueux : tissu en velours de qualité supérieure.</p>
-  </div>
-  <img src="produit1-detail5.jpg" alt="Tapis détail 5">
-</div>
 
 <footer>Samp Shop - Meilleurs Articles du Sénégal</footer>
 
